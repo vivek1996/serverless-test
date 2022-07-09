@@ -1,0 +1,17 @@
+# .github/workflows/scheduled-builds.yml
+name: Trigger Site Rebuild on a CRON Schedule
+
+on:
+  schedule:
+    # Runs "at minute 55 past every hour" (see https://crontab.guru)
+    - cron: '*/6 * * * *'
+jobs:
+  build:
+    name: Trigger Severless function
+    runs-on: ubuntu-latest
+    steps:
+      - name: HTTP Request Action
+        uses: fjogeleit/http-request-action@v1.9.2
+        with:
+         url: 'https://serverless-testing-viv.netlify.app/.netlify/functions/hello-world'
+         method: 'GET'
