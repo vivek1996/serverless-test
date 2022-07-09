@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vivek1996/serverless-test#readme",
   "dependencies": {
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^2.6.7",
+    "telegraf": "^4.8.5"
   }
 }
