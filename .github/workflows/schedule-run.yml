@@ -20,3 +20,4 @@ jobs:
         with:
          url: 'https://chill-swanky-garden.glitch.me/'
          method: 'GET'
+         preventFailureOnNoResponse: 'true'
